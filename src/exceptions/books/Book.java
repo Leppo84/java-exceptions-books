@@ -1,11 +1,11 @@
-package java.exceptions.books;
+package exceptions.books;
 
 public class Book {
 
-	String title;
-	String author;
-	String editor;
-	int pages;
+	private String title;
+	private String author;
+	private String editor;
+	private int pages;
 	
 	public Book(String title, String author, String editor, int pages) {
 		super();
