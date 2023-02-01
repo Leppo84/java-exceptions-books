@@ -9,6 +9,12 @@ public class Book {
 	
 	public Book(String title, String author, String editor, int pages) {
 		super();
+		try {
+			setTitle(title);
+		} catch (Exception e) {
+			// TODO: handle exception
+			this.title="Undefined";
+		}
 		this.title = title;
 		this.author = author;
 		this.editor = editor;
@@ -19,8 +25,12 @@ public class Book {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setTitle(String title) throws Exception {
+		if (title.isEmpty())
+			throw new Exception("Empty title");
+		else
+			this.title = title;
+		
 	}
 
 	public String getAuthor() {
